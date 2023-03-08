@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zindigi_flutter/theme/colors/grey_pallete.dart';
 
-import 'colors/grey_pallete.dart';
 
 AppBarTheme appBarTheme = AppBarTheme(
     color: backgroundGrey,
@@ -8,7 +8,7 @@ AppBarTheme appBarTheme = AppBarTheme(
       color: blueGrey,
       fontSize: 24,
       fontWeight: FontWeight.bold,
-      fontFamily: 'Avenir-Heavy',
+      fontFamily: 'Poppins',
     ),
     centerTitle: false,
     iconTheme: IconThemeData(

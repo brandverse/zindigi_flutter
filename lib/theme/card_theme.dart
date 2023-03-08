@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zindigi_flutter/theme/colors/app_colors.dart';
+import 'package:zindigi_flutter/theme/colors/grey_pallete.dart';
 
-import 'colors/app_colors.dart';
-import 'colors/grey_pallete.dart';
 
 CardTheme cardTheme = CardTheme(
   color: Colors.white,
@@ -45,7 +45,7 @@ final ButtonStyle secondaryRaisedButtonStyle = ElevatedButton.styleFrom(
   minimumSize: const Size(88, 52),
   padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
   shape:  RoundedRectangleBorder(
-    side: BorderSide(color: AppColors.primaryOrange, width: 1),
+    side: const BorderSide(color: AppColors.primaryOrange, width: 1),
     borderRadius: BorderRadius.circular(14),
   ),
 );

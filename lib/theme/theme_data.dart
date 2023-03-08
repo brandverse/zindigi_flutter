@@ -1,14 +1,13 @@
 import 'package:chikoo_design_system/theme/appBarTheme.dart';
 import 'package:flutter/material.dart';
+import 'package:zindigi_flutter/theme/bottom_nav_theme.dart';
+import 'package:zindigi_flutter/theme/card_theme.dart';
+import 'package:zindigi_flutter/theme/colors/app_colors.dart';
+import 'package:zindigi_flutter/theme/colors/grey_pallete.dart';
 import 'package:zindigi_flutter/theme/text_theme.dart';
 
-import 'bottom_nav_theme.dart';
-import 'card_theme.dart';
-import 'colors/app_colors.dart';
-import 'colors/grey_pallete.dart';
-
 ThemeData theme = ThemeData(
-    // fontFamily: '',
+    fontFamily: 'Poppins',
     primarySwatch: AppColors.customOrange,
     appBarTheme: appBarTheme,
     hintColor: AppColors.lightBlueGrey,
