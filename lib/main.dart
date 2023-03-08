@@ -1,6 +1,12 @@
+import 'package:chikoo_design_system/theme/themeData.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:zindigi_flutter/theme/theme_data.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await  dotenv.load(fileName: kReleaseMode ? '.env' : '.debug.env');
   runApp(const MyApp());
 }
 
@@ -11,9 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Zindigi Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme,
       home: const MyHomePage(title: 'Zindigi Flutter Demo Home Page'),
     );
   }
