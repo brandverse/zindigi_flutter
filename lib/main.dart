@@ -6,7 +6,7 @@ import 'package:zindigi_flutter/theme/theme_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await  dotenv.load(fileName: kReleaseMode ? '.env' : '.debug.env');
+  await dotenv.load(fileName: kReleaseMode ? '.env' : '.debug.env');
   runApp(const MyApp());
 }
 
@@ -17,7 +17,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Zindigi Flutter Demo',
-      theme: theme,
+      theme: AppTheme().loadTheme(
+        customTheme: theme,
+        useDefaultTextTheme: false,
+        useDefaultCardTheme: false,
+        useDefaultAppBarTheme: false,
+        useDefaultButtonTheme: false,
+        useDefaultInputTheme: false,
+        useDefaultBottomNavTheme: false,
+        useDefaultFloatingTheme: false,
+      ),
       home: const MyHomePage(title: 'Zindigi Flutter Demo Home Page'),
     );
   }
@@ -64,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), 
+      ),
     );
   }
 }
